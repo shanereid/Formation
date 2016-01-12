@@ -1,0 +1,77 @@
+{
+    "theme":"bootstrap",
+    "modals": {},
+    "forms": {
+        "example": [
+        	{
+        		"type":"example/blurb",
+        		"name":"example-blurb"
+    		},
+            {
+                "type":"selectbox",
+                "label":"Basic Dropdown",
+                "name":"dropdown-1",
+                "options":[
+                    {
+                        "label":"First Value",
+                        "value":"val-1"
+                    },
+                    {
+                        "label":"Second Value",
+                        "value":"val-2"
+                    },
+                    {
+                        "label":"Third Value",
+                        "value":"val-3"
+                    }
+                ],
+                "required":true
+            },
+            {
+                "type":"textbox",
+                "name":"example-textbox",
+                "label":"Textbox",
+                "placeholder":"Random Text"
+            },
+            {
+                "type":"checkbox",
+                "name":"example-checkbox",
+                "label":"Is this cool?",
+                "class":["checkbox"],
+                "checked":true
+            },
+            {
+                "type":"textarea",
+                "name":"example-textarea-disabled",
+                "placeholder":"Disabled Field",
+                "label":"Text Area",
+                "disabled":true
+            },
+            {
+                "type":"div",
+                "name":"example-repeat-%n",
+                "header":"Repeated Section #%n",
+                "data-val":"repeat-val-%n",
+                "repeat":3,
+                "contents": [
+                	{
+                		"type":"example/blurb",
+                		"extra":"Add a bit of extra content to the blurb for this section"
+                	},
+                    {
+                        "type":"textbox",
+                        "name":"example-number",
+                        "placeholder":"Between 0 and 100",
+                        "maxlength":3,
+                        "label":"Example Textbox (Max Length 3)"
+                    },
+                    {
+                        "type":"hidden",
+                        "name":"hidden-input",
+                        "value":"hidden-val"
+                    }
+                ]
+            }
+        ]
+    }
+}

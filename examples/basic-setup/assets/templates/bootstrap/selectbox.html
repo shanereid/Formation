@@ -1,0 +1,7 @@
+<div class="form-group {{#class}}{{.}} {{/class}}">
+    <select {{#disabled}}disabled="disabled"{{/disabled}} {{#name}}name="{{name}}"{{/name}} {{#id}}id="{{id}}"{{/id}} {{#required}}required{{/required}}>
+        {{#options}}
+        <option value="{{value}}" {{#selected}}selected="selected"{{/selected}}>{{label}}</option>
+        {{/options}}
+    </select>
+</div>

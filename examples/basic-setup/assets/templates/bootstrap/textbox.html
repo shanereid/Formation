@@ -1,0 +1,4 @@
+<div class="{{^icon}}form-group{{/icon}}{{#icon}}input-group{{/icon}} {{#required}}{{#value}}fn-valid{{/value}}{{/required}}{{#class}} {{.}}{{/class}}">
+    {{#icon}}<span class="input-group-addon"><span class="glyphicon glyphicon-{{icon}}"></span></span>{{/icon}}
+    <input {{#disabled}}disabled="disabled"{{/disabled}} type="text" {{#id}}id="{{id}}"{{/id}} {{#name}}name="{{name}}"{{/name}} {{#placeholder}}placeholder="{{placeholder}}"{{/placeholder}} class="form-control" {{#value}}value="{{value}}"{{/value}} {{#maxlength}}maxlength="{{maxlength}}"{{/maxlength}} {{#required}}required{{/required}}/>
+</div>

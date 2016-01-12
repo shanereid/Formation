@@ -1,0 +1,4 @@
+<div class="{{^icon}}form-group{{/icon}}{{#icon}}input-group{{/icon}} {{#class}}{{.}} {{/class}}">
+    {{#icon}}<span class="input-group-addon"><span class="glyphicon glyphicon-{{icon}}"></span></span>{{/icon}}
+    <textarea {{#disabled}}disabled="disabled"{{/disabled}} class="form-control" {{#maxlength}}maxlength="{{maxlength}}"{{/maxlength}} {{#name}}name="{{name}}"{{/name}} {{#id}}id="{{id}}"{{/id}} {{#placeholder}}placeholder="{{placeholder}}"{{/placeholder}}>{{#value}}{{value}}{{/value}}</textarea>
+</div>

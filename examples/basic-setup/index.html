@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <!-- Title -->
+        <title>Formation // Basic Setup</title>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container wrapper">
+            <h1>Formation - Basic Setup</h1>
+            <div class="col-md-8 col-md-offset-2" id="form-container"></div>
+        </div>
+
+        <!-- Javascript -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/js/hogan.js"></script>
+        <script type="text/javascript" src="assets/js/formation.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                // Callback function for when Formation ready's up
+                var formation_ready = function() {
+                    var $form = formation.form('example', {'example-textbox':{'value':'Override value in JS'}});
+                    $('#form-container').append($form);
+                };
+
+                // Instantiate Formation with our callback
+                window.formation = new Formation({
+                    'ready_callbacks':[formation_ready]
+                });
+            });
+        </script>
+    </body>
+</html>
