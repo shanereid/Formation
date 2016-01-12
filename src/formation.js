@@ -10,7 +10,7 @@ var Formation = function(u_options) {
         },
         templates = {},
         self = this,
-        qs = (pbcutils? pbcutils.query_string_to_object() : false);
+        qs = (typeof pbcutils !== 'undefined'? pbcutils.query_string_to_object() : false);
     self.ready = false;
     jQuery.extend(options, u_options);
 
