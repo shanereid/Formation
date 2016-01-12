@@ -10,7 +10,26 @@ var Formation = function(u_options) {
         },
         templates = {},
         self = this,
-        qs = (typeof pbcutils !== 'undefined'? pbcutils.query_string_to_object() : false);
+        qs = {};
+    (function() {
+        if(!tQS)
+            tQS = location.search;
+        if(tQS.length > 1) {
+            var obj = {},
+                query = tQS;
+            if(tQS[0] === '?' || tQS[0] === '!' || tQS[0] === '#')
+                query = tQS.substr(1);
+
+            var pairs = query.split('&');
+
+            for (var i = 0; i < pairs.length; i++) {
+                var pair = pairs[i].split('=');
+                obj[pair[0]] = decodeURIComponent(pair[1]);
+            }
+
+            qs = obj;
+        }
+    })();
     self.ready = false;
     jQuery.extend(options, u_options);
 
