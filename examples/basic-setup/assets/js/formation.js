@@ -12,8 +12,7 @@ var Formation = function(u_options) {
         self = this,
         qs = {};
     (function() {
-        if(!tQS)
-            tQS = location.search;
+        var tQS = location.search;
         if(tQS.length > 1) {
             var obj = {},
                 query = tQS;
