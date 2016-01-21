@@ -191,7 +191,11 @@ var Formation = function(u_options) {
             }
 
             if(field.name && field.name in values) {
-                $.extend(field, values[field.name]);
+                var tValue = values[field.name];
+                if(typeof tValue === 'string')
+                    field.value = tValue;
+                else
+                    $.extend(field, values[field.name]);
             }
 
             if(field.type === 'selectbox' && field.current_value) {
